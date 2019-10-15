@@ -9,6 +9,8 @@ public class Rectangle {
     private int height = y1 + y2; //Höhe
     private int deltax;
     private int deltay;
+    private int movex;
+    private int movey;
     private boolean inside;
 
     public Rectangle(int x1, int y1, int x2, int y2) {
@@ -33,5 +35,10 @@ public class Rectangle {
 
     public boolean isInside(int x2, int y2){
         return inside;
+    }
+
+    public void move(int deltax, int deltay){
+       this.deltax = x1 + movex;
+       this.deltay = y1 + movey;
     }
 }
